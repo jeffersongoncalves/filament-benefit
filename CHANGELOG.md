@@ -9,8 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `FilamentBenefitPlugin` with `BenefitResource` for Filament v5.
+- `FilamentBenefitPlugin` with `BenefitResource` for Filament v4.
 - Translatable `name`/`description` fields via `jeffersongoncalves/filament-translatable`.
 - Config-based resource override (`filament-benefit.resources.benefit`) and navigation group.
 
-[Unreleased]: https://github.com/jeffersongoncalves/filament-benefit/commits/3.x
+[Unreleased]: https://github.com/jeffersongoncalves/filament-benefit/commits/2.x
