@@ -1,0 +1,71 @@
+{
+    "name": "jeffersongoncalves/filament-benefit",
+    "description": "Filament v5 panel plugin providing admin UI (CRUD) for jeffersongoncalves/laravel-benefit — translatable benefits.",
+    "keywords": [
+        "laravel",
+        "filament",
+        "filament-plugin",
+        "benefit",
+        "benefits"
+    ],
+    "homepage": "https://github.com/jeffersongoncalves/filament-benefit",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jefferson Gonçalves",
+            "email": "gerson.simao.92@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "^5.0",
+        "jeffersongoncalves/filament-translatable": "^3.0",
+        "jeffersongoncalves/laravel-benefit": "^1.0",
+        "spatie/laravel-package-tools": "^1.14.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.21",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JeffersonGoncalves\\FilamentBenefit\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JeffersonGoncalves\\FilamentBenefit\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint",
+        "test": "vendor/bin/pest"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JeffersonGoncalves\\FilamentBenefit\\FilamentBenefitServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "support": {
+        "issues": "https://github.com/jeffersongoncalves/filament-benefit/issues",
+        "source": "https://github.com/jeffersongoncalves/filament-benefit"
+    }
+}
