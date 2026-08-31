@@ -2,10 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentBenefit\Resources\Benefits;
 
-use BackedEnum;
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Benefit\Models\Benefit;
 use JeffersonGoncalves\FilamentBenefit\FilamentBenefitPlugin;
@@ -21,7 +19,7 @@ class BenefitResource extends Resource
 {
     use Translatable;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedGift;
+    protected static ?string $navigationIcon = 'heroicon-o-gift';
 
     protected static ?string $recordTitleAttribute = 'name';
 
@@ -49,9 +47,9 @@ class BenefitResource extends Resource
         return __('filament-benefit::benefit.item.plural_label');
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return BenefitForm::configure($schema);
+        return BenefitForm::configure($form);
     }
 
     public static function table(Table $table): Table
